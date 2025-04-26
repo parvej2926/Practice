@@ -1,0 +1,10 @@
+parvej:100000
+tuli:200000
+hamim:300000
+atia:400000
+mohammad:500000
+atik:600000
+tausif:700000
+kaka:800000
+pele:900000
+alvee:1000000

@@ -1,0 +1,7 @@
+1
+5
+23
+5
+463
+463
+The sum of odd numbers is: 960

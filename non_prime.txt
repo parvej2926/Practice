@@ -11,3 +11,4 @@
 76
 8766546
 76
+The sum of non-prime numbers is: 17534353
