@@ -1,0 +1,5 @@
+app1: factorial.c
+    gcc factorial.c -o factorial
+
+run1: app1
+    ./factorial
