@@ -19,6 +19,9 @@ int main() {
     char buffer[1024];
     while (fgets(buffer, sizeof(buffer), file) != NULL) {
         for(int i = 0; i < strlen(buffer); i++) {
+            if (buffer[i] == ' ') {
+                buffer[i] = '\n';
+            }
             if(buffer[i] == ':') {
                 buffer[i] = ' ';
             }
@@ -32,7 +35,7 @@ int main() {
     }
     cout << "Salary Ticket\n";
     for(auto it : salary_ticket) {
-        cout << it.first << ": " << it.second << endl;
+        cout << it.first << "  " << it.second << endl;
     }
     while(fgets(buffer, sizeof(buffer), file1)){
         string line(buffer);
@@ -46,10 +49,8 @@ int main() {
         cout << it << endl;
     }
     for(auto it : travelers) {
-        if(salary_ticket.find(it) != salary_ticket.end()) {
-            float price = salary_ticket[it] * 0.1;
-            fprintf(file2, "%s %.2f\n", it.c_str(), price);
-        }
+        float price = salary_ticket[it] * 0.1;
+        fprintf(file2, "%s %.2f\n", it.c_str(), price);
     }
 
     fclose(file);
