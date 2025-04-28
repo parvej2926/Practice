@@ -26,6 +26,7 @@ int main() {
         string location;
         ss >> name >> age >> location;
         locations.insert(location);
+
         Map_chikungunia[name + " " + to_string(age)] = location;
     }
     fclose(file);
