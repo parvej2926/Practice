@@ -7,32 +7,26 @@ CFLAGS = -Wall -Wextra -g -std=c++11
 # Source files and output
 SRC = jarched.cpp
 OUT = jarched
-SRC1 = factorial.c
-OUT1 = factorial
-PLOT = plot.plt
-PLOT_OUT = sin_cos_x.png
-O = open
+SRC1 = 1.cpp
+OUT1 = 1
+SRC2 = 2.cpp
+OUT2 = 2
 
 # Targets
-all: $(OUT) $(PLOT_OUT) $(OUT1)
+all: $(OUT) $(OUT2) $(OUT1)
 
-jarched: jarched.cpp
-	g++ jarched.cpp -o jarched
+$(OUT): $(SRC)
+	$(CC) $(SRC) -o $(OUT)
+
 
 $(OUT1): $(SRC1)
 	$(C) $(SRC1) -o $(OUT1)
 
-$(PLOT_OUT): $(PLOT)
-	gnuplot $(PLOT)
 
-run: jarched
-	./jarched
+run: $(OUT)
+	./$(OUT)
 run1: $(OUT1)
 	./$(OUT1)
-run2: $(PLOT_OUT)
-	$(O) $(PLOT_OUT)
-	@echo "Plot generated: $(PLOT_OUT)"
 clean:
 	rm -f $(OUT)
 	rm -f $(OUT1)
-	rm -f $(PLOT_OUT)
