@@ -9,7 +9,7 @@ int main() {
     }
 
     char ch;
-    int num = 0, max = -2147483648; // Smallest int
+    int num = 0, max = -2147483648;
     bool hasNum = false;
 
     while (!feof(file)) {
@@ -31,10 +31,12 @@ int main() {
         }
     }
 
-    // For last line (if no newline at end)
-    if (hasNum && num > max) max = num;
-    if (hasNum) cout << max << endl;
-
+    if (hasNum && num > max){
+        max = num;
+    }
+    if (hasNum){
+        cout << max << endl;
+    }
     fclose(file);
     return 0;
 }
