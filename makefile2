@@ -1,0 +1,19 @@
+CC = gcc
+CPP = g++
+CFLAG = -o
+G = gnuplot
+
+
+SRC = chikungunia.cpp 
+OUT = chikungunia
+SRC1 = plot.plt
+
+m2_run : $(OUT)
+	$(CPP) $(SRC) $(CFLAG) $(OUT)
+
+m2_run1 : $(SRC1)
+	$(G) $(SRC1) 
+
+m2_clean : 
+	rm -f $(OUT) $(OUT1)
+
