@@ -1,0 +1,58 @@
+EXAM TIME:    3HR
+
+BEST OF LUCK
+
+
+
+1.⁠ ⁠suppose you have a file with few strings . (one string in one line )
+file name: stling.txt
+
+write a code that will print the words in such a manner that the string with the highest length will be at the top .
+
+example: 
+
+input:                    output:
+
+tuli                    musharrof
+parvez                  parvez
+das                     gupta
+gupta                   tuli
+musharrof               das
+
+hint: use stl
+
+    2. suppose you have txt file named text.txt. the file contains numbers ,alphabets , and special characters . (all are in the same line )
+
+write a code that will store numbers, alphabets and special characters in diffferent stl library and print them. (you are no allowed to use set library)
+
+example: 
+
+input:                      output:
+                            
+tuli 12 % $ 90 parvez       file1.txt: tuli parvez       file2.txt: 12 90       file3.txt: % $
+    
+hint: use stringstream
+
+    3. suppose your text containts some extra letters. 
+write a code to remove the previous  letter if it encounters '#'.
+
+example: 
+
+input:                                          output:
+
+myy# naaaa###meee## ii#ss# tuuu##liii##.        my name is tuli.
+
+hint: use stringstream
+
+    4. write a code that will check the meassage format . if the format is correct it will say valid. else it will print invalid.
+
+example: 
+
+input:                                      output:
+
+BOARD:DHA ROLL:2926 NAME:PARVEZ UNI:CU      valid
+
+BOARD:Dha 2926 NAME:PARVEZ UNI:CU           invalid
+
+    5. make a makefile to combine all the codes.
+
