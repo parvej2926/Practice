@@ -29,6 +29,4 @@ getchar();
 printf("Enter your direction");
 scanf("%s",str);
 pln(str,x,y);
-
-
 }

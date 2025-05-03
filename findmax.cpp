@@ -1,19 +1,21 @@
 #include <iostream>
+#include <climits>
+#include <fstream>
 using namespace std;
 
 int main() {
-    FILE *file = fopen("num.txt", "r");
+    ifstream file("num.txt");
     if (!file) {
         cout << "Error opening file!" << endl;
         return 1;
     }
 
     char ch;
-    int num = 0, max = MIN_VALUE; // Smallest int
+    int num = 0, max = -INT_MAX; // Smallest int
     bool hasNum = false;
 
-    while (!feof(file)) {
-        ch = fgetc(file);
+    while (!file.eof()) {
+        ch = file.get();
         if (ch >= '0' && ch <= '9') {
             num = num * 10 + (ch- '0');
             hasNum = true;
@@ -26,7 +28,7 @@ int main() {
             }
             if (ch == '\n') {
                 cout << max << endl;
-                max = ;
+                max = -INT_MAX;
             }
         }
     }
@@ -35,6 +37,6 @@ int main() {
     if (hasNum && num > max) max = num;
     if (hasNum) cout << max << endl;
 
-    fclose(file);
+    file.close();
     return 0;
 }

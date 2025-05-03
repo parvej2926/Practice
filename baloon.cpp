@@ -19,7 +19,7 @@ int main() {
         balloonColors[color]++;
     }
     cout << "\nBalloon color counts:\n";
-    for (const auto& pair : balloonColors) {
+    for (auto pair : balloonColors) {
         cout << "Color: " << pair.first << ", Count: " << pair.second << endl;
     }
 

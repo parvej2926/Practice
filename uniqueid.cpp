@@ -27,7 +27,7 @@ int main(){
 
     stringstream ss;
     ss<<id;
-    string idc = ss.c();
+    string idc = ss.str();
 
     if(idc.length()!=9){
         printf("invaild idc");

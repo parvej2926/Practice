@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <map>
 #include <set>
 #include <sstream>
@@ -7,15 +8,15 @@ using namespace std;
 int main() {
     map<string, string> Map_chikungunia;
     multiset<string> locations;
-    FILE *file = fopen("victim.txt", "r");
+    ifstream file("victim.txt");
     if (!file) {
-        cerr << "Error opening file." << endl;
+        cout << "Error opening file." << endl;
         return 1;
     }
     char buffer[100];
-    while (fgets(buffer, sizeof(buffer), file)) {
+    while (file.getline(buffer, sizeof(buffer))) {
         string line(buffer);
-        for (char &c : line) {
+        for (char& c : line) {
             if (c == '-') {
                 c = ' ';
             }
@@ -29,9 +30,9 @@ int main() {
 
         Map_chikungunia[name + " " + to_string(age)] = location;
     }
-    fclose(file);
-    for (auto it : Map_chikungunia) {
-        cout << it.first << " " << it.second << endl;
+    file.close();
+    for (auto& pair : Map_chikungunia) {
+        cout << pair.first << " " << pair.second << endl;
 
     }
 
@@ -40,7 +41,7 @@ int main() {
     int highest_freq = 0;
     string highest_freq_location = "";
 
-    for (auto it : locations) {
+    for (auto& it : locations) {
             if (it == current_location) {
                 current_count++;
             } else {
