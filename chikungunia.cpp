@@ -20,15 +20,19 @@ int main() {
             if (c == '-') {
                 c = ' ';
             }
-        }
+        } //bari 45 barishal
         stringstream ss(line);
+        /*
+       bari
+       45
+       barishal */
         string name;
         int age;
         string location;
         ss >> name >> age >> location;
         locations.insert(location);
 
-        Map_chikungunia[name + " " + to_string(age)] = location;
+        Map_chikungunia[name + " " + to_string(age)] = location;// bari 45 barishal
     }
     file.close();
     for (auto& pair : Map_chikungunia) {
@@ -36,7 +40,7 @@ int main() {
 
     }
 
-    string current_location;
+    string current_location="";
     int current_count = 0;
     int highest_freq = 0;
     string highest_freq_location = "";

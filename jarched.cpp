@@ -11,7 +11,7 @@ int main() {
     list<string> n;
     list<string> c;
 
-    string doc1 = "Data is the new oil of digital economy";
+    string doc1 = "Data is the new oil of digital  a economy";
     string doc2 = "Data is new oil";
 
     stringstream a;
