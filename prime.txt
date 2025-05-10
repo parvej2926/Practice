@@ -1,7 +1,3 @@
 2
 5
-23
-5
-463
-463
-The sum of prime numbers is: 961
+The sum of prime numbers is: 7

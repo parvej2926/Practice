@@ -1,14 +1,4 @@
 2
 4
 6
-4
-34
-54
-32
-876
-98
-8766546
-76
-8766546
-76
-The sum of even numbers is: 35069668
+The sum of even numbers is: 30

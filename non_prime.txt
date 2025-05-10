@@ -1,14 +1,4 @@
 1
 4
 6
-4
-34
-54
-32
-876
-98
-8766546
-76
-8766546
-76
-The sum of non-prime numbers is: 17534353
+The sum of non-prime numbers is: 11
