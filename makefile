@@ -15,6 +15,7 @@ all: $(O) $(OUT1) $(OUT2)
 
 $(O): jarched.cpp
 	$(CC) $(CF) $(P) -o $(O)
+	#g++ jarched.cpp -o jarchedgit
 $(OUT1): $(SRC1)
 	$(CC) $(CF) $(SRC1) -o $(OUT1)
 
