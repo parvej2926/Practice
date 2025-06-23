@@ -14,10 +14,8 @@ int main() {
     string doc1 = "Data is the new oil of digital  a economy";
     string doc2 = "Data is new oil";
 
-    stringstream a;
-    a << doc1;
-    stringstream b;
-    b << doc2;
+    stringstream a(doc1);
+    stringstream b(doc2);
     string word;
 
     while (a >> word) {

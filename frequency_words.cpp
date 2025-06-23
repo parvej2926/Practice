@@ -9,9 +9,6 @@ int main() {
     stringstream p(a);
     string word;
     while(p >> word) {
-        if(doc.find(word) == doc.end())
-            doc[word] = 1;
-        else
             doc[word]++;
     }
     for(auto it : doc) {

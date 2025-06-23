@@ -1,26 +1,23 @@
 #include<iostream>
 using namespace std;
 int main(){
-    const int table_size=7;
-    int hash[table_size];
+    int hash[7];
 
-    for(int i=0;i<table_size;i++){
+    for(int i=0;i<7;i++){
         hash[i]=-1;
 
     }
     int keys[]={76,93,40,47,10,55,11};
-    for(int i=0;i<table_size;i++){
-        int index=keys[i]% table_size;
+    for(int i=0;i<7;i++){
+        int index=keys[i]% 7;
         while(hash[index]!=-1){
-            index=(index+1)%table_size;
+            index=(index+1)%7;
         }
         hash[index]=keys[i];
-    }
-    for(int i=0;i<table_size;i++){
-        if(hash[i]!=-1)
-        cout<<i<<""<<hash[i]<<endl;
-        else cout<<i<<" "<<"enpty"<<endl;
-
+    }int p=0;
+    for(auto it : hash){
+        cout<<p << "    "<< it << endl;
+        p++;
     }
     return 0;
 }

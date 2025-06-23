@@ -1,0 +1,30 @@
+#include <iostream>
+#include <map>
+#include <unordered_set>
+using namespace std;
+
+int main() {
+    // Define the map: string -> unordered_multiset of ints
+    map<string, unordered_multiset<int>> myMap;
+
+    // Insert some elements
+    myMap["a"].insert(1);
+    myMap["a"].insert(3);
+    myMap["a"].insert(3); // duplicate allowed
+    myMap["a"].insert(5);
+
+    myMap["b"].insert(2);
+    myMap["b"].insert(4);
+    myMap["b"].insert(2); // duplicate allowed
+
+    // Print the contents
+    for (auto entry : myMap) {
+        cout << entry.first << ": ";
+        for (auto val : entry.second) {
+            cout << val << " ";
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
